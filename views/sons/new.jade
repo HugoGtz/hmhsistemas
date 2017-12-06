@@ -1,0 +1,16 @@
+            
+extends ../layout
+script(src='../js/url.js')
+
+block content
+    h1.
+        #{title}
+    form#formAddBlob(name="addson",method="post",action="/sons")
+        p job: 
+            input#inputName(type="text", placeholder="ex. Dev web", name="job")
+        p
+             input#idP(type='hidden', value="#{idP}", name="idP")
+        p
+            button#btnSubmit(type="submit", onClick="url()") Create
+script
+console.log("hola")

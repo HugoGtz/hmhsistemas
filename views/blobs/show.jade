@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+    h1.
+        InfoNodeid #{blob._id}
+    p idP: #{blob.idP}
+    p Name: #{blob.name}
+    p Badge: #{blob.badge}
+    p DOB: #{blob.dc}
+    a(href="/sons/new?idP=#{blob._id}") CreateSon
+
+   

@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+    h1.
+         #{title}
+    ul
+        - each son, i in sons
+            li
+                = son.idP
+                = son.job
+                = son.dc
+                = son.du
+                = son._id
+                form(action='/sons/#{son._id}/edit',method='post',enctype='application/x-www-form-urlencoded')
+                    input(type='hidden',value='DELETE',name='_method')
+                    button(type='submit').
+                        Delete
+                p 
+                    a(href='/sons/#{son._id}/edit') Edit
+                p
+                    a(href='/sons/#{son._id}') Show
